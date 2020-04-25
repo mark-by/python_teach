@@ -46,7 +46,7 @@ class List:
     def find(self, key):
         temp = self.root
         if self.root is None:
-            return
+            return None
         while temp is not None and temp.element != key:
             temp = temp.next
         return temp
@@ -58,6 +58,7 @@ class List:
         if temp.element == key:
             self.root = temp.next
             del temp
+            return
         while temp.next is not None and temp.next.element != key:
             temp = temp.next
         if temp.next is None:

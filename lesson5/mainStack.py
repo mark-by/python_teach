@@ -17,6 +17,5 @@ def factorial_recursive(number):
         return 1
     return factorial_recursive(number - 1) * number
 
-
-print(factorial(5))
+print(factorial(20000))
 print(factorial_recursive(5))
