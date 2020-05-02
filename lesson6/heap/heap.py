@@ -32,11 +32,14 @@ class Heap:
 
     def build(self, array):
         self.buffer = array
-        for i in range(len(self.buffer) // 2 - 1, 0, -1):
+        for i in range(len(self.buffer) // 2 - 1, -1, -1):
             self.__sift_down(i)
 
     def top(self):
         return self.buffer[0]
+
+    def empty(self):
+        return False if self.buffer else True
 
     def pop(self):
         if not self.buffer:
